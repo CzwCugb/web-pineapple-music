@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Pineapple Music</title>
+
+    <link rel="stylesheet" href="styles/index.css">
+    <script src = "scripts/JQuery.js"></script>
+    <script src = "scripts/index.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href = "index.html" class = "header-title">
+            <img src="images/pineappleMusic.png" alt="pineappleMusic">
+            Pineapple Music
+        </a>
+        <div class = "header-search">
+            <input type="text" class = "search-input" placeholder="搜索您想要的专辑名称" id = "search-input">
+            <div class = "search-button" id = "search-button">
+                <img src="images/search.png" alt="search" >
+            </div>
+        </div>
+        <nav class = "header-nav">
+            <ul>
+                <li class = "nav-item">
+                    <a href="javascript:window.location = 'cart.html'">
+                        <img src = "images/cart.png" alt = "cart">
+                    </a>
+                </li>
+                <li class = "nav-item">
+                    <a href="javascript:window.location = 'profile.html'">
+                        <img src = "images/me.png" alt = "me">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--上方推荐栏-->
+        <section class = "recommend">
+
+            <div class = "recommend-largeBar">
+                <div class = "largeBar-textLine"></div>
+                <a href = "javascript:window.location = 'news.html?code=1'" class= "largeBar-text">周杰伦最新专辑《最伟大的作品》已上线</a>
+            </div>
+
+            <div class = "recommend-smallBar" id = "smallBar_1">
+                <div class = "smallBar-textLine"></div>
+                <a href = "javascript:window.location = 'news.html?code=2'" class = "smallBar-text">李荣浩《纵横四海》获“十大金曲奖”</a>
+            </div>
+            <div class = "recommend-smallBar" id = "smallBar_2">
+                <div class = "smallBar-textLine"></div>
+                <a href = "javascript:window.location = 'news.html?code=3'" class = "smallBar-text">陈奕迅新专辑《CHIN UP!》“别垂头丧气”</a>
+            </div>
+            <div class = "recommend-smallBar" id = "smallBar_3">
+                <div class = "smallBar-textLine"></div>
+                <a href = "javascript:window.location = 'news.html?code=4'" class = "smallBar-text">邓紫棋新专辑《启示录》已上线 </a>
+            </div>
+
+        </section>
+        <!--当下最流行的音乐-->
+        <section class = "popular">
+            <div class = "popular-label">
+                <span class = "label-text">当下最热门的华语音乐专辑</span>
+            </div>
+            <div class = "popular-slider">
+                <ul class = "item-container">
+                    <li class = "slider-item" id = "item_1_1"><div>
+                        <div class = "img-container">
+                            <img src="images/albums/1.jpg" alt = "1">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">范特西</span> <br>
+                            <span class = "singer">周杰伦</span> <br><br>
+                            <span class = "explain">
+                                时间 : 2001 <br>
+                                国家/地区 : 中国(台湾) <br>
+                                价格 : 91￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(1)" class = "clickLink" >购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '1'" class = "clickLink" id = "ref_1_1">详情</a>
+                        </div>
+                    </div></li>
+                    <li class = "slider-item" id = "item_1_2"><div>
+                        <div class = "img-container">
+                            <img src="images/albums/2.jpg" alt = "2">
+                        </div>
+
+                        <div class = "item-text">
+                            <span class = "album">周杰伦的床边故事</span> <br>
+                            <span class = "singer">周杰伦</span> <br><br>
+                            <span class = "explain">
+                                时间 : 2016 <br>
+                                国家/地区 : 中国(台湾) <br>
+                                价格 : 86￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(2)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '2'" class = "clickLink" id = "ref_1_2">详情</a>
+                        </div>
+                    </div></li>
+                    <li class = "slider-item" id = "item_1_3"><div>
+                        <div class = "img-container">
+                            <img src="images/albums/3.jpg" alt = "3">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">反正是我</span> <br>
+                            <span class = "singer">陈奕迅</span> <br> <br>
+                            <span class = "explain">
+                                时间 : 2001 <br>
+                                国家/地区 : 中国(香港) <br>
+                                价格 : 72￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(3)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '3'" class = "clickLink" id = "ref_1_3">详情</a>
+                        </div>
+                    </div></li>
+                    <li class = "slider-item" id = "item_1_4"><div>
+                        <div class = "img-container">
+                            <img src="images/albums/4.jpg" alt = "4">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">认了吧</span> <br>
+                            <span class = "singer">陈奕迅</span> <br> <br>
+                            <span class = "explain">
+                                时间 : 2007 <br>
+                                国家/地区 : 中国(香港) <br>
+                                价格 : 115￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(4)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '4'" class = "clickLink" id = "ref_1_4">详情</a>
+                        </div>
+                    </div></li>
+                    <li class = "slider-item" id = "item_1_5"><div>
+                        <div class = "img-container">
+                            <img src="images/albums/5.jpg" alt = "5">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">伟大的渺小</span> <br>
+                            <span class = "singer">林俊杰</span> <br> <br>
+                            <span class = "explain">
+                                时间 : 2018 <br>
+                                国家/地区 : 中国(台湾) <br>
+                                价格 : 82￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(5)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '5'" class = "clickLink" id = "ref_1_5">详情</a>
+                        </div>
+                    </div></li>
+                    <li class = "slider-item" id = "item_1_6"><div>
+                        <div class = "img-container">
+                            <img src="images/albums/6.jpg" alt = "6">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">模特</span> <br>
+                            <span class = "singer">李荣浩</span> <br><br>
+                            <span class = "explain">
+                                时间 : 2013 <br>
+                                国家/地区 : 中国(大陆) <br>
+                                价格 : 83￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(6)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '6'" class = "clickLink" id = "ref_1_6">详情</a>
+                        </div>
+                    </div></li>
+                    <li class = "slider-item" id = "item_1_7"><div>
+                        <div class = "img-container">
+                            <img src="images/albums/7.jpg" alt = "7">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">麻雀</span> <br>
+                            <span class = "singer">李荣浩</span> <br><br>
+                            <span class = "explain">
+                                时间 : 2020 <br>
+                                国家/地区 : 中国(大陆) <br>
+                                价格 : 78￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(7)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '7'" class = "clickLink">详情</a>
+                        </div>
+                    </div></li>
+                    <li class = "slider-item" id = "item_1_8"><div>
+                        <div class = "img-container">
+                            <img src="images/albums/8.jpg" alt = "8">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">逆光</span> <br>
+                            <span class = "singer">孙燕姿</span> <br> <br>
+                            <span class = "explain">
+                                时间 : 2007 <br>
+                                国家/地区 : 中国(台湾) <br>
+                                价格 : 108￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(8)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '8'" class = "clickLink" id = "ref_1_8">详情</a>
+                        </div>
+                    </div></li>
+                    <li class = "slider-item" id = "item_1_9"><div>
+                        <div class = "img-container">
+                            <img src="images/albums/9.jpg" alt ="9">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">风筝</span> <br>
+                            <span class = "singer">孙燕姿</span> <br> <br>
+                            <span class = "explain">
+                                时间 : 2001 <br>
+                                国家/地区 : 中国(台湾) <br>
+                                价格 : 52￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(9)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '9'" class = "clickLink" id = "ref_1_9">详情</a>
+                        </div>
+                    </div></li>
+                    <li class = "slider-item" id = "item_1_10"><div>
+                        <div class = "img-container">
+                            <img src="images/albums/10.jpg" alt = "10">
+                        </div>
+
+                        <div class = "item-text">
+                            <span class = "album">不可能错过你</span> <br>
+                            <span class = "singer">王力宏</span> <br> <br>
+                            <span class = "explain">
+                                时间 : 1999 <br>
+                                国家/地区 : 中国(大陆) <br>
+                                价格 : 117￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(10)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '10'" class = "clickLink" id = "ref_1_10">详情</a>
+                        </div>
+                    </div></li>
+                </ul>
+                <div class = "slider-subline">
+                    <div class = "arrows" id = "arrows-left"><img src="images/lastPage.png" alt="lastPage"></div>
+                    <div class = "arrows" id = "arrows-right"><img src="images/nextPage.png" alt="nextPage"></div>
+
+                    <div class = "indicator" id = "indicator_1_1"></div>
+                    <div class = "indicator" id = "indicator_1_2"></div>
+                    <div class = "indicator" id = "indicator_1_3"></div>
+                    <div class = "indicator" id = "indicator_1_4"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class = "popular">
+            <div class = "popular-label">
+                <span class = "label-text">当下最热门的英文音乐专辑</span>
+            </div>
+            <div class = "popular-slider">
+                <ul class = "item-container">
+                    <li class = "slider-item" id = "item_2_1">
+                        <div class = "img-container">
+                            <img src="images/albums/11.jpg" alt = "11">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">Hit Me Hard And Soft</span> <br>
+                            <span class = "singer">Billie Eilish</span> <br><br>
+                            <span class = "explain">
+                                时间 : 2024 <br>
+                                国家 : 欧洲 <br>
+                                价格 : 210￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(11)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '11'" class = "clickLink">详情</a>
+                        </div>
+                    </li>
+                    <li class = "slider-item" id = "item_2_2">
+                        <div class = "img-container">
+                            <img src="images/albums/12.jpg" alt = "12">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">Guts</span> <br>
+                            <span class = "singer">Olivia Rodrigo</span> <br><br>
+                            <span class = "explain">
+                                时间 : 2023 <br>
+                                国家 : 美国 <br>
+                                价格 : 140￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(12)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '12'" class = "clickLink">详情</a>
+                        </div>
+                    </li>
+                    <li class = "slider-item" id = "item_2_3">
+                        <div class = "img-container">
+                            <img src="images/albums/13.jpg" alt = "13">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">Eternal Sunshine</span> <br>
+                            <span class = "singer">Ariana Grande</span> <br> <br>
+                            <span class = "explain">
+                                时间 : 2024 <br>
+                                国家 : 美国 <br>
+                                价格 : 135￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(13)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '13'" class = "clickLink">详情</a>
+                        </div>
+                    </li>
+                    <li class = "slider-item" id = "item_2_4">
+                        <div class = "img-container">
+                            <img src="images/albums/14.jpg" alt = "14">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">Emails I Can't Send</span> <br>
+                            <span class = "singer">Sabrina Carpenter</span> <br> <br>
+                            <span class = "explain">
+                                时间 : 2022 <br>
+                                国家 : 美国 <br>
+                                价格 : 280￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(14)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '14'" class = "clickLink">详情</a>
+                        </div>
+                    </li>
+                    <li class = "slider-item" id = "item_2_5">
+                        <div class = "img-container">
+                            <img src="images/albums/15.jpg" alt = "15">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">Radical Optimism</span> <br>
+                            <span class = "singer">Dua Lipa</span> <br> <br>
+                            <span class = "explain">
+                                时间 : 2024 <br>
+                                国家 : 英国 <br>
+                                价格 : 221￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(15)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '15'" class = "clickLink">详情</a>
+                        </div>
+                    </li>
+                    <li class = "slider-item" id = "item_2_6">
+                        <div class = "img-container">
+                            <img src="images/albums/16.jpg" alt = "16">
+                        </div>
+                        <div class = "item-text" style = "line-height:17px;">
+                            <span class = "album">The Rise And Fall Of A <br>Midwest Princess</span> <br>
+                            <span class = "singer">Chappell Roan</span> <br><br>
+                            <span class = "explain">
+                                时间 : 2023 <br>
+                                国家 : 美国 <br>
+                                价格 : 180￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(16)" class = "clickLink" style = "position:relative;top:6px">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '16'" class = "clickLink" style = "position:relative;top:6px">详情</a>
+                        </div>
+                    </li>
+                    <li class = "slider-item" id = "item_2_7">
+                        <div class = "img-container">
+                            <img src="images/albums/17.jpg" alt = "17">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">Françoise Hardy</span> <br>
+                            <span class = "singer">Françoise Hardy</span> <br><br>
+                            <span class = "explain">
+                                时间 : 2024 <br>
+                                国家 : 法国 <br>
+                                价格 : 199￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(17)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '17'" class = "clickLink">详情</a>
+                        </div>
+                    </li>
+                    <li class = "slider-item" id = "item_2_8">
+                        <div class = "img-container">
+                            <img src="images/albums/18.jpg" alt = "18">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">Moriarty</span> <br>
+                            <span class = "singer">Fat Cairo</span> <br> <br>
+                            <span class = "explain">
+                                时间 : 2001 <br>
+                                国家 : 英国 <br>
+                                价格 : 78￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(18)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '18'" class = "clickLink">详情</a>
+                        </div>
+                    </li>
+                    <li class = "slider-item" id = "item_2_9">
+                        <div class = "img-container">
+                            <img src="images/albums/19.jpg" alt = "19">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">Reputation</span> <br>
+                            <span class = "singer">Taylor Swift</span> <br> <br>
+                            <span class = "explain">
+                                时间 : 2017 <br>
+                                国家 : 美国 <br>
+                                价格 : 99￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(19)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '19'" class = "clickLink">详情</a>
+                        </div>
+                    </li>
+                    <li class = "slider-item" id = "item_2_10">
+                        <div class = "img-container">
+                            <img src="images/albums/20.jpg" alt = "20">
+                        </div>
+                        <div class = "item-text">
+                            <span class = "album">Black Moses</span> <br>
+                            <span class = "singer">Isaac Hayes</span> <br> <br>
+                            <span class = "explain">
+                                时间 : 2024 <br>
+                                国家 : 美国 <br>
+                                价格 : 59￥ <br>
+                            </span>
+                            <br>
+                            <a href = "javascript:addToCart(20)" class = "clickLink">购买</a>
+                            <a href = "javascript:window.location = 'details.html?code=' + '20'" class = "clickLink">详情</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class = "slider-subline">
+                    <div class = "arrows" id = "arrows-left-2"><img src="images/lastPage.png" alt="lastPage"></div>
+                    <div class = "arrows" id = "arrows-right-2"><img src="images/nextPage.png" alt="nextPage"></div>
+
+                    <div class = "indicator" id = "indicator_2_1"></div>
+                    <div class = "indicator" id = "indicator_2_2"></div>
+                    <div class = "indicator" id = "indicator_2_3"></div>
+                    <div class = "indicator" id = "indicator_2_4"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class = "categories">
+            <div class = "categories-label">
+                <span class = "label-text">发现更多音乐</span>
+            </div>
+
+            <div class = "categories-bar">
+                <a href = "javascript:window.location = 'categories.html?cate=Pop' " class = "bar-item" id = "bar-item1">
+                    <img src="images/categories/Alternative.png" alt="Alternative">
+                    <span>流行音乐</span>
+                </a>
+                <a  href = "javascript:window.location = 'categories.html?cate=Folk' " class = "bar-item" id = "bar-item2">
+                    <img src="images/categories/Ambient-Instrumental.png" alt="Ambient-Instrumental">
+                    <span>民谣音乐</span>
+                </a>
+                <a  href = "javascript:window.location = 'categories.html?cate=Blues' " class = "bar-item" id = "bar-item3">
+                    <img src="images/categories/Blues.png" alt="Blues">
+                    <span>蓝调音乐</span>
+                </a>
+                <a  href = "javascript:window.location = 'categories.html?cate=Classic' " class = "bar-item" id = "bar-item4">
+                    <img src="images/categories/Classical.png" alt="Classical">
+                    <span>古典音乐</span>
+                </a>
+            </div>
+            <div class = "categories-bar">
+                <a  href = "javascript:window.location = 'categories.html?cate=Country' "class = "bar-item" id = "bar-item5">
+                    <img src="images/categories/Country.png" alt="Country">
+                    <span>乡村音乐</span>
+                </a>
+                <a  href = "javascript:window.location = 'categories.html?cate=Electronic' "class = "bar-item" id = "bar-item6">
+                    <img src="images/categories/Electronic.png" alt="Electronic">
+                    <span>电子音乐</span>
+                </a>
+                <a  href = "javascript:window.location = 'categories.html?cate=Jazz' "class = "bar-item" id = "bar-item7">
+                    <img src="images/categories/Jazz.png" alt="Jazz">
+                    <span>爵士音乐</span>
+                </a>
+                <a  href = "javascript:window.location = 'categories.html?cate=Metal' "class = "bar-item" id = "bar-item8">
+                    <img src="images/categories/Metal.png" alt="Metal">
+                    <span>金属音乐</span>
+                </a>
+            </div>
+            <div class = "categories-bar" id = "bar-item9">
+                <a  href = "javascript:window.location = 'categories.html?cate=Rock' "class = "bar-item">
+                    <img src="images/categories/Pop.png" alt="Pop">
+                    <span>摇滚音乐</span>
+                </a>
+                <a  href = "javascript:window.location = 'categories.html?cate=Punk' "class = "bar-item" id = "bar-item10">
+                    <img src="images/categories/Punk.png" alt="Punk">
+                    <span>朋克音乐</span>
+                </a>
+                <a  href = "javascript:window.location = 'categories.html?cate=Hiphop' "class = "bar-item" id = "bar-item11">
+                    <img src="images/categories/Reggae-Dub-Ska.png" alt="Reggae-Dub-Ska">
+                    <span>嘻哈音乐</span>
+                </a>
+                <a  href = "javascript:window.location = 'categories.html?cate=Others' "class = "bar-item" id = "bar-item12">
+                    <img src="images/categories/World.png" alt="World">
+                    <span>其他音乐</span>
+                </a>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <br>
+        <div class = "sentence">"世界用图画和我说话，我的心灵以音乐应答。" ——泰戈尔</div>
+        <div class = "sentence">"音乐是人类的通用语言。" ——塞·罗杰斯</div>
+        <div class = "sentence">"音乐用理想的纽带把人类结合在一起。" ——瓦格纳</div>
+        <br>
+        <div class = "acclaim">©2024 Zhiwei Chen from China University of Geosciences, Beijing. For learning purpose.</div>
+    </footer>
+
+</body>
+
+</html>

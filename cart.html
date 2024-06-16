@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cart</title>
+    <link rel="stylesheet" href="styles/cart.css">
+    <script src = "scripts/JQuery.js"></script>
+    <script src = "scripts/cart.js"></script>
+</head>
+<body>
+    <header>
+    <a href = "index.html" class = "header-title">
+        <img src="images/pineappleMusic.png" alt="pineappleMusic">
+        Pineapple Music
+    </a>
+    <div class = "header-search">
+        <input type="text" class = "search-input" placeholder="搜索您想要的专辑名称" id = "search-input">
+        <div class = "search-button" id = "search-button">
+            <img src="images/search.png" alt="search" >
+        </div>
+    </div>
+    <nav class = "header-nav">
+        <ul>
+            <li class = "nav-item">
+                <a href="javascript:window.location = 'cart.html'">
+                    <img src = "images/cart.png" alt = "cart">
+                </a>
+            </li>
+            <li class = "nav-item">
+                <a href="javascript:window.location = 'profile.html'">
+                    <img src = "images/me.png" alt = "me">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        <div id = "columns">
+            <div class = "columnItem" id = "pickedCol">
+                <input type="checkbox" style = "width:20px;height:20px;" id = "allPick">
+                全选
+            </div>
+            <div class = "columnItem" id = "imageCol">专辑封面</div>
+            <div class = "columnItem" id = "nameCol">专辑名称</div>
+            <div class = "columnItem" id = "numberCol">数量</div>
+            <div class = "columnItem" id = "priceCol">单价</div>
+        </div>
+
+        <div id = "purchaseBar">
+
+        </div>
+
+
+        <div id = "dealLine">
+            <div id = "dealText">
+                <span>合计</span>
+                <span id = "totalPrice">0</span>
+                <span>￥</span>
+            </div>
+            <div id = "settleButton" onclick = "settle()">去结算</div>
+            <div id = "clearButton" onclick = "clearCart()">清空</div>
+        </div>
+
+    </main>
+</body>
+</html>

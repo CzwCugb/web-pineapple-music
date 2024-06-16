@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    font-family:"微软雅黑";
+}
+
+body{
+    overflow-x:hidden;
+}
+
+header{
+    display:flex;
+    background-color: #31312f;
+    width:100vw;
+    height:55px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    .header-title{
+        color:white;
+        justify-content: left;
+        font-size:20px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-left:80px;
+        margin-top:15px;
+
+        img{
+            position:relative;
+            left:-8px;
+            top:-10px;
+            float:left;
+            width:45px;
+            height:45px;
+        }
+    }
+    .header-search {
+        position:relative;
+        left:40px;
+        top:13px;
+        .search-input{
+            float:left;
+            transition: 0.5s;
+            font-size:15px;
+            width:190px;
+            height:30px;
+            text-indent: 10px;
+        }
+        .search-input:focus,
+        .search-input:not(:placeholder-shown) {
+            transition:0.5s;
+            width: 350px;
+        }
+        .search-button{
+            float:left;
+            font-size:15px;
+            transition: 0.5s;
+            font-weight: bold;
+            margin-left:5px;
+            width:40px;
+            height:30px;
+            img{
+                height:32px;
+                width:32px;
+            }
+        }
+        .search-button:hover{
+            cursor:pointer;
+        }
+    }
+
+
+    .header-nav{
+        position:absolute;
+        top:0;
+        left:1280px;
+        .nav-item{
+            text-align: center;
+            height:55px;
+            width:70px;
+            float:left;
+            color:white;
+            display:inline;
+            line-height:50px;
+            img{
+                padding-left:17px;
+                padding-right:17px;
+                margin-top:15px;
+                height:23px;
+                width:23px;
+            }
+
+        }
+        .nav-item:hover{
+            cursor: pointer;
+            background-color:black;
+        }
+    }
+}
+
+main{
+    #newsTitle{
+        transition: 0.5s;
+        font-weight: bold;
+        font-size:40px;
+        padding-top:20px;
+        padding-bottom:20px;
+        text-align:center;
+
+    }
+    #newsTitle:hover{
+        transition: 0.5s;
+        text-decoration: underline;
+        text-underline-offset:0.3em;
+        text-shadow: 5px 5px 5px yellow;
+    }
+
+
+    #newsImageBar{
+        text-align: center;
+        padding-top:20px;
+        padding-bottom:20px;
+        #newsImage{
+            margin-left:310px;
+            overflow: hidden;
+            width:890px;
+            height:300px;
+            box-shadow: 0 0 0 5px gray;
+            img{
+                transition: 0.5s;
+                width:890px;
+                height:300px;
+            }
+            img:hover{
+                transition: 0.5s;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+
+
+    #newsTextBar{
+        #newsText{
+            line-height: 28px;
+            font-size:18px;
+            text-align: left;
+            margin-left:310px;
+            width:900px;
+        }
+    }
+}

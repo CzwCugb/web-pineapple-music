@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <link rel="stylesheet" href="styles/details.css">
+    <script src = "scripts/JQuery.js"></script>
+    <script src = "scripts/details.js"></script>
+</head>
+<body>
+    <header>
+    <a href = "index.html" class = "header-title">
+        <img src="images/pineappleMusic.png" alt="pineappleMusic">
+        Pineapple Music
+    </a>
+    <div class = "header-search">
+        <input type="text" class = "search-input" placeholder="搜索您想要的专辑名称" id = "search-input">
+        <div class = "search-button" id = "search-button">
+            <img src="images/search.png" alt="search" >
+        </div>
+    </div>
+    <nav class = "header-nav">
+        <ul>
+            <li class = "nav-item">
+                <a href="javascript:window.location = 'cart.html'">
+                    <img src = "images/cart.png" alt = "cart">
+                </a>
+            </li>
+            <li class = "nav-item">
+                <a href="javascript:window.location = 'profile.html'">
+                    <img src = "images/me.png" alt = "me">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <div class = "leftBar">
+            <div class = "textTitle">专辑简介</div>
+            <div id = "image">
+                <img src="" alt="AlbumImage" width = "180px" height = "180px">
+            </div>
+
+            <div class = "textArea">
+                <span class = "title" >专辑:</span> &nbsp;&nbsp;&nbsp; <span class = "content" id = "name-content"></span> <br>
+                <span class = "title">歌手:</span>&nbsp;&nbsp;&nbsp; <span class = "content"  id = "singer-content"></span> <br>
+                <span class = "title" >国家/地区:</span> &nbsp;&nbsp;&nbsp;<span class = "content" id = "country-content"></span> <br>
+                <span class = "title" >年份:</span> &nbsp;&nbsp;&nbsp;<span class = "content" id = "year-content"></span> <br>
+                <span class = "title" >价格:</span>&nbsp;&nbsp;&nbsp; <span class = "content" id = "price-content"></span> <br>
+            </div>
+
+            <div class = "textArea">
+                <span class = "title" >歌曲数量:</span> &nbsp;&nbsp;&nbsp; <span class = "content" id = "sum-content"></span><br>
+                <span class = "title" >语言:</span> &nbsp;&nbsp;&nbsp; <span class = "content" id = "language-content"></span><br>
+                <span class = "title" >音乐风格:</span> &nbsp;&nbsp;&nbsp; <span class = "content" id = "style-content"></span><br>
+            </div>
+
+            <div id = "listArea">
+                <div class = "listTitle">专辑歌曲</div>
+
+                <div class = "songLine" id = "song1"></div>
+                <div class = "songLine" id = "song2"></div>
+                <div class = "songLine" id = "song3"></div>
+                <div class = "songLine" id = "song4"></div>
+                <div class = "songLine" id = "song5"></div>
+                <div class = "songLine" id = "song6"></div>
+                <div class = "songLine" id = "song7"></div>
+                <div class = "songLine" id = "song8"></div>
+                <div class = "songLine" id = "song9"></div>
+                <div class = "songLine" id = "song10"></div>
+                <div class = "songLine" id = "song11"></div>
+                <div class = "songLine" id = "song12"></div>
+                <div class = "songLine" id = "song13"></div>
+                <div class = "songLine" id = "song14"></div>
+                <div class = "songLine" id = "song15"></div>
+                <div class = "songLine" id = "song16"></div>
+                <div class = "songLine" id = "song17"></div>
+                <div class = "songLine" id = "song18"></div>
+                <div class = "songLine" id = "song19"></div>
+                <div class = "songLine" id = "song20"></div>
+
+            </div>
+
+            <div id = "msgArea">
+                <div class = "msgTitle">更多信息</div>
+                <div id = "msgText"></div>
+            </div>
+
+        </div>
+
+        <div class = "rightBar">
+            <div class = "rightBarTitle">专辑MV</div>
+
+            <iframe src=""
+                    scrolling="no" border="0" frameborder="no" framespacing="0"
+                    allowfullscreen="true" id = "videoInterface"></iframe>
+
+            <div class = "videoArea">
+                <div class = "videoButton" id = "videoZoom">放大</div>
+                <div class = "videoButton" id = "videoTo">跳转</div>
+            </div>
+
+            <div class = "rightBarTitle">购买链接</div>
+            <div class = "purchase" id = "goToCart">购物车</div>
+            <div class = "purchase" id = "addToCart">购买</div>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>

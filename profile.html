@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles/profile.css">
+    <script src = "scripts/JQuery.js"></script>
+    <script src = "scripts/profile.js"></script>
+</head>
+<body>
+    <header>
+    <a href = "index.html" class = "header-title">
+        <img src="images/pineappleMusic.png" alt="pineappleMusic">
+        Pineapple Music
+    </a>
+    <div class = "header-search">
+        <input type="text" class = "search-input" placeholder="搜索您想要的专辑名称" id = "search-input">
+        <div class = "search-button" id = "search-button">
+            <img src="images/search.png" alt="search" >
+        </div>
+    </div>
+    <nav class = "header-nav">
+        <ul>
+            <li class = "nav-item">
+                <a href="javascript:window.location = 'cart.html'">
+                    <img src = "images/cart.png" alt = "cart">
+                </a>
+            </li>
+            <li class = "nav-item">
+                <a href="javascript:window.location = 'profile.html'">
+                    <img src = "images/me.png" alt = "me">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+    <main>
+
+        <div id = "loginArea">
+            <div id = "loginTitle">
+                欢迎来到<span>菠萝音乐</span>
+            </div>
+
+            <div id = "accountLine">
+                <span>账号</span>
+                <input type="text" placeholder="请输入账号" id = "username">
+            </div>
+            <div id = "passwordLine">
+                <span>密码</span>
+                <input type="password" placeholder="请输入密码" id = "password">
+            </div>
+
+            <div id = "loginOperation">
+                <div id = "registerButton" onclick = "register()">注册</div>
+                <div id = "loginButton" onclick = "login()">登录</div>
+            </div>
+        </div>
+        <div id = "messageArea">
+            <div id = "messageTitle">
+                您在<span>菠萝音乐</span>的个人信息
+            </div>
+            <div class = "messageLine">
+                <span>国家</span>
+                <input type="text" placeholder="您的国家为空" id = "country">
+            </div>
+            <div class = "messageLine">
+                <span>地区</span>
+                <input type="text" placeholder="您的地区为空" id = "area">
+            </div>
+            <div class = "messageLine">
+                <span>电话</span>
+                <input type="text" placeholder="您的电话号码为空" id = "telephone">
+            </div>
+            <div class = "messageLine">
+                <span>邮箱</span>
+                <input type="text" placeholder="您的邮箱为空" id = "email">
+            </div>
+            <div class = "messageLine">
+                <span>地址</span>
+                <input type="text" placeholder="您的邮寄地址为空" id = "address">
+            </div>
+
+            <div id = "messageOperation">
+                <div id = "updateButton" onclick = "update()">保存信息</div>
+            </div>
+        </div>
+
+
+    </main>
+</body>
+</html>

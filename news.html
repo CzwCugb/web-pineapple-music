@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>news</title>
+    <link rel="stylesheet" href="styles/news.css">
+    <script src = "scripts/JQuery.js"></script>
+    <script src = "scripts/news.js"></script>
+</head>
+<body>
+    <header>
+    <a href = "index.html" class = "header-title">
+        <img src="images/pineappleMusic.png" alt="pineappleMusic">
+        Pineapple Music
+    </a>
+    <div class = "header-search">
+        <input type="text" class = "search-input" placeholder="搜索您想要的专辑名称" id = "search-input">
+        <div class = "search-button" id = "search-button">
+            <img src="images/search.png" alt="search" >
+        </div>
+    </div>
+    <nav class = "header-nav">
+        <ul>
+            <li class = "nav-item">
+                <a href="javascript:window.location = 'cart.html'">
+                    <img src = "images/cart.png" alt = "cart">
+                </a>
+            </li>
+            <li class = "nav-item">
+                <a href="javascript:window.location = 'profile.html'">
+                    <img src = "images/me.png" alt = "me">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        <div id = "newsTitle"></div>
+
+        <div id = "newsImageBar">
+            <div id = "newsImage">
+                <img src="" alt="newsImage">
+            </div>
+        </div>
+
+        <div id = "newsTextBar">
+            <div id = "newsText"></div>
+        </div>
+
+    </main>
+</body>
+</html>

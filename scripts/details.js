@@ -5,11 +5,13 @@ class purchaseItem{
     }
 }
 
+//初始化参数
 let Data = JSON.parse(localStorage.getItem('Data'));
 let nowCartList = JSON.parse(localStorage.getItem("purchaseList"));
 let map = new Map();
 let receiveData = decodeURI(window.location.search);
 
+//加入购物车
 function addToCartFromDetails(code_){
     //从浏览器缓存中提取当前购物车清单
     let finished = false;
@@ -29,6 +31,7 @@ function addToCartFromDetails(code_){
     window.alert("专辑《" + Data[map.get("code") - 1].name + "》 : 已成功加入购物车")
 }
 
+//搜索
 function searchAlbum(str){
     if(str.length === 0) return;
     for(let i = 0 ; i < Data.length ; i ++){
@@ -40,8 +43,10 @@ function searchAlbum(str){
     window.alert("未在专辑库中找到 ： " + str);
 }
 
+
 $(document).ready(function () {
 
+    //接受参数
     receiveData = receiveData.substr(receiveData.indexOf("?") + 1) + "&";
     while(!(receiveData==="")){
         let keyEnd=receiveData.indexOf("=");
@@ -50,7 +55,7 @@ $(document).ready(function () {
         map.set(receiveData.substring(0,keyEnd),receiveData.substring(valueStart,valueEnd).split(","));
         receiveData=receiveData.substr(valueEnd+1);
     }
-
+    //填入专辑信息
     $("#name-content").text(Data[map.get("code") - 1].name);
     $("#singer-content").text(Data[map.get("code") - 1].singer);
     $("#country-content").text(Data[map.get("code") - 1].country);
@@ -76,7 +81,7 @@ $(document).ready(function () {
         $("#song" + (i+1)).text(res);
     }
 
-
+    //mv视频方法
     $("#videoZoom").click(function (){
         if($(this).text() === "放大"){
             $(".leftBar").hide();
@@ -110,9 +115,10 @@ $(document).ready(function () {
     })
 
     $("#videoTo").click(function (){
-        location.href = "https://search.bilibili.com/all?vt=57806407&keyword=" + Data.Pop[map.get("code") - 1].name;
+        location.href = "https://search.bilibili.com/all?vt=57806407&keyword=" + Data[map.get("code") - 1].name;
     })
 
+    //购物车方法
     $("#goToCart").click(function (){
         window.location = "cart.html";
     })
@@ -120,7 +126,7 @@ $(document).ready(function () {
     $("#addToCart").click(function (){
         addToCartFromDetails(map.get("code"));
     })
-
+    //搜素框绑定事件
     $("#search-button").on("click", function(){
         searchAlbum($("#search-input").val());
     })

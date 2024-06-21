@@ -26,13 +26,13 @@ class purchaseItem{
     }
 }
 
+// 初始化参数
 let slider_len_1 = 0;
 let slider_len_2 = 0;
 let slider_gap = 2;
 let total_items = 10;
 let cur_idx_1 = 1;
 let cur_idx_2 = 1;
-
 let Data = [
     new Album("范特西", "周杰伦", "中国(台湾)", "2001", "91",
         ["爱在西元前", "爸，我回來了", "简单爱", "忍者", "开不了口", "上海一九四三", "对不起", "威廉古堡", "双截棍", "安静"],
@@ -330,9 +330,9 @@ let Data = [
         "《CHIN UP!》是陈奕迅的一张专辑，发布于2022年。这张专辑融合了多种音乐元素，展示了陈奕迅的音乐才华和多样性，包含了多首深受欢迎的歌曲。《CHIN UP!》是陈奕迅于2023年10月27日发行的音乐专辑，共收录6首粤语歌曲和2首普通话歌曲，由陈奕迅、林家谦担任制作人。2023年7月1日，周耀辉凭借专辑收录曲《人啊人》获得第34届台湾金曲奖最佳作词人奖。",
         "//player.bilibili.com/player.html?isOutside=true&aid=407865498&bvid=BV1gG411y7bu&cid=1315649977&p=1")
 ]
-
 let purchaseList = [];
 
+//高亮标识点
 function highLightIndicator(f, num) {
     if (num === 1) {
         if (f === false) {
@@ -378,7 +378,7 @@ function highLightIndicator(f, num) {
     }
 
 }
-
+//加入购物车
 function addToCart(code_){
     //从浏览器缓存中提取当前购物车清单
     let nowCartList = JSON.parse(localStorage.getItem("purchaseList"));
@@ -398,7 +398,7 @@ function addToCart(code_){
     localStorage.setItem("purchaseList",JSON.stringify(nowCartList));
     window.alert("专辑《" + Data[parseInt(code_) - 1].name + "》 : 已成功加入购物车")
 }
-
+//搜索专辑
 function searchAlbum(str){
     if(str.length === 0) return;
     for(let i = 0 ; i < Data.length ; i ++){

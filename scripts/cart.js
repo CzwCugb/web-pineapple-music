@@ -79,6 +79,7 @@ function clearCart(){
     }
 }
 
+//搜索
 function searchAlbum(str){
     if(str.length === 0) return;
     for(let i = 0 ; i < Data.length ; i ++){

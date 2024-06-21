@@ -10,6 +10,7 @@ class Account{
     }
 }
 
+//初始化参数
 let accountList = [
     new Account("PM123456","88888888","中国","北京市","15434523225","example@123.com","朝阳区"),
     new Account("PM111111","88888888","中国","湖北省武汉市","15409606278","example@123.com","无"),
@@ -20,6 +21,7 @@ let username_ = null;
 let password_ = null;
 let id = null;
 
+//搜索事件
 $("#search-button").on("click", function(){
     searchAlbum($("#search-input").val());
 })
@@ -31,6 +33,7 @@ $('#search-input').on('keypress', function(event) {
     }
 });
 
+//登录
 function login(){
     username_ = $("#username").val();
     password_ = $("#password").val();
@@ -60,6 +63,7 @@ function login(){
     }
 }
 
+//注册
 function register(){
     let username_ = $("#username").val();
     let password_ = $("#password").val();
@@ -67,6 +71,7 @@ function register(){
     window.alert("账号注册成功");
 }
 
+//保存信息
 function update(){
     accountList[id].country = $("#country").val();
     accountList[id].area = $("#area").val();
@@ -76,6 +81,7 @@ function update(){
     window.alert("账户信息更新成功");
 }
 
+//搜索
 function searchAlbum(str){
     if(str.length === 0) return;
     for(let i = 0 ; i < Data.length ; i ++){

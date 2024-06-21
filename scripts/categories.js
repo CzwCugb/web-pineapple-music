@@ -1,5 +1,6 @@
 Data = JSON.parse(localStorage.getItem("Data"));
 
+//初始化参数
 let styleNames = new Map([
     ["Pop","流行"],
     ["Folk","民谣"],
@@ -14,7 +15,6 @@ let styleNames = new Map([
     ["Hiphop","嘻哈"],
     ["Others","其他"]
 ])
-
 let countryNames = new Map([
     ["China","中国"],
     ["US","美国"],
@@ -23,11 +23,9 @@ let countryNames = new Map([
     ["Germany","德国"],
     ["OtherCountry","其他"]
 ])
-
 let pagesNum = 15;
 let current_page = 0;
 let pagesTotal = null;
-
 let lastStyle = null;
 let lastCountry = null;
 let lastYear = null;
@@ -38,7 +36,7 @@ $(document).ready(function () {
     let cate = styleNames.get(oriCate);
     reloadAlbumList(cate);
 
-    // 风格
+    // 选定风格
     for (let key of styleNames.keys()) {
         $("#" + key).click(function () {
             $(".cateItem").removeClass("active"); // 移除所有项的 active 类
@@ -50,7 +48,7 @@ $(document).ready(function () {
         }
     }
 
-    // 国家
+    // 选定国家
     for (let key of countryNames.keys()) {
         $("#" + key).click(function () {
             $(".cateItem").removeClass("active"); // 移除所有项的 active 类
@@ -59,7 +57,7 @@ $(document).ready(function () {
         });
     }
 
-    // 年份
+    // 选定年份
     for (let i = 2024; i >= 2011; i--) {
         let year = i.toString();
         $("#" + year).click(function () {
@@ -69,7 +67,7 @@ $(document).ready(function () {
         });
     }
 
-    // “更早”
+    // 年份：“更早”
     $("#earlier").click(function () {
         current_page = 0;
         $(".cateItem").removeClass("active"); // 移除所有项的 active 类
@@ -77,6 +75,7 @@ $(document).ready(function () {
         reloadAlbumList(undefined, undefined, "earlier");
     });
 
+    // 下一页
     $("#nextPageButton").click(function(){
         if(current_page < pagesTotal){
             current_page++;
@@ -86,6 +85,7 @@ $(document).ready(function () {
         }
     })
 
+    // 上一页
     $("#prevPageButton").click(function(){
         if(current_page > 0){
             current_page--;
@@ -95,10 +95,12 @@ $(document).ready(function () {
         }
     })
 
+    // 排序
     $("#sortList").change(function() {
         reloadAlbumList(lastStyle, lastCountry, lastYear, $(this).val());
     });
 
+    // 搜索
     $("#search-button").on("click", function(){
         searchAlbum($("#search-input").val());
     })

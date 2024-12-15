@@ -4,13 +4,6 @@
 
 HTML5 + CSS3 + JavaScript
 
->HTML: 约1100行
->
->CSS: 约1600行
->
->JavaScript：约900行
-
-
 
 ## 开发平台
 
